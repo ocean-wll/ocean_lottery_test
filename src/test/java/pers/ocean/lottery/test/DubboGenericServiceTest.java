@@ -17,6 +17,10 @@ public class DubboGenericServiceTest {
 
     @Test
     public void method1() {
+        this.dubboServer();
+    }
+
+    public void dubboServer() {
         ApplicationConfig app = new ApplicationConfig("simpleSpring");
         //RegistryConfig reg = new RegistryConfig("multicast://224.5.6.7:1234");
         RegistryConfig reg = new RegistryConfig("zookeeper://127.0.0.1:2181");
@@ -42,10 +46,10 @@ public class DubboGenericServiceTest {
             GenericService genericService = ReferenceConfigCache.getCache().get(reference);
             // 传递参数对象的json字符串进行一次调用
             Object res = genericService.$invoke("sayHi", new String[] {}, new Object[] {});
-            System.out.println(
+            System.err.println(
                 "result[setUser]：" + res); // 响应结果:result[setUser]：{name=Tom, class=com.xxx.api.service.User, age=24}
         } catch (Throwable ex) {
-            ex.printStackTrace();
+            // ignore
         } finally {
             bootstrap.stop();
         }

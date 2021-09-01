@@ -12,3 +12,16 @@ dubbo:
   protocol:
     name: dubbo
     port: 20880
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000  #熔断超时时间
+ribbon:
+  ReadTimeout: 60000  #请求处理的超时时间
+  ConnectTimeout: 60000 #请求连接超时时间
+  MaxAutoRetries: 0 #对当前实例的重试次数
+  MaxAutoRetriesNextServer: 1 #切换实例的重试次数 1
