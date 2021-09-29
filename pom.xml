@@ -42,28 +42,47 @@
             <scope>test</scope>
         </dependency>
 
+<!--        <dependency>-->
+<!--            <groupId>org.apache.dubbo</groupId>-->
+<!--            <artifactId>dubbo</artifactId>-->
+<!--            <version>2.7.13</version>-->
+<!--        </dependency>-->
+<!--        -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.dubbo</groupId>-->
+<!--            <artifactId>dubbo-spring-boot-starter</artifactId>-->
+<!--            <version>2.7.13</version>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
         <dependency>
-            <groupId>org.apache.dubbo</groupId>
+            <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
-            <version>2.7.13</version>
+            <version>2.6.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba.boot/dubbo-spring-boot-starter -->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>
-            <version>5.1.0</version>
+            <version>4.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-recipes</artifactId>
-            <version>5.1.0</version>
+            <version>4.2.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>2.7.13</version>
-        </dependency>
         <dependency>
             <groupId>pers.ocean</groupId>
             <artifactId>ocean_lottery_rpc</artifactId>
